@@ -3,24 +3,40 @@
     "id": 1,
     "title": "project1",
     "description": "project1 description",
+    "languages": [
+      "html",
+      "css",
+      "javascript"
+    ],
     "image": "https://www.latevaweb.com/diseno-web/cima-farmacias-diseno.jpg"
   },
   {
     "id": 2,
-    "title": "project1",
-    "description": "project1 description",
-    "image": "https://nexovirtual.net/wp-content/uploads/2022/09/diseno-tienda-online-ropa-mujer-pineberry.jpg"
+    "title": "Tienda de ropa 'DesignTee'",
+    "description": "Sitio web simple de una tienda de ropa, con un carrito de compras y simulación de pago.",
+    "languages": [
+      "React",
+      "TailwindCSS"
+    ],"image": "https://i.ibb.co/TtCrv6v/clothes-App.png"
   },
   {
     "id": 3,
     "title": "sportify",
     "description": "postiaoetkson",
-    "image": "https://www.latevaweb.com/diseno-web/cima-farmacias-diseno.jpg"
+    "languages": [
+      "html",
+      "css",
+      "javascript"
+    ],"image": "https://www.latevaweb.com/diseno-web/cima-farmacias-diseno.jpg"
   },
   {
     "id": 4,
     "title": "farmacia",
     "description": "farmacio description",
-    "image": "https://nexovirtual.net/wp-content/uploads/2022/09/diseno-tienda-online-ropa-mujer-pineberry.jpg"
+    "languages": [
+      "html",
+      "css",
+      "javascript"
+    ],"image": "https://nexovirtual.net/wp-content/uploads/2022/09/diseno-tienda-online-ropa-mujer-pineberry.jpg"
   }
 ]

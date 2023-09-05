@@ -31,21 +31,30 @@ import abilityLang from "../mocks/abilityLang.json";
 					href="mailto:saidsamuel2006@hotmail.com"
 					rel="noreferrer"
 				>
-					<Icon name="fluent:mail-16-filled" class="w-11 transition-colors hover:text-red-500" />
+					<Icon
+						name="fluent:mail-16-filled"
+						class="w-11 transition-colors hover:text-red-500"
+					/>
 				</a>
 				<a
 					target="_blank"
 					href="https://github.com/shogunIncognito"
 					rel="noreferrer"
 				>
-					<Icon name="mdi:github" class="w-11 transition-colors hover:text-red-500" />
+					<Icon
+						name="mdi:github"
+						class="w-11 transition-colors hover:text-red-500"
+					/>
 				</a>
 				<a
 					target="_blank"
 					href="https://www.linkedin.com/in/samuel-aya/"
 					rel="noreferrer"
 				>
-					<Icon name="mdi:linkedin" class="w-11 transition-colors hover:text-red-500" />
+					<Icon
+						name="mdi:linkedin"
+						class="w-11 transition-colors hover:text-red-500"
+					/>
 				</a>
 			</div>
 		</div>
@@ -55,10 +64,7 @@ import abilityLang from "../mocks/abilityLang.json";
 			<p
 				class="text-2xl max-w-[20ch] md:max-w-[45ch] rainbow-text animated flex flex-col"
 			>
-				<Icon
-					name="logos:react"
-					class="w-40 my-10 self-center spining"
-				/>
+				<Icon name="logos:react" class="w-40 my-10 self-center spining" />
 				 Amante del desarrollo de software en la creación de soluciones
 				tecnológicas innovadoras.
 			</p>
@@ -72,23 +78,30 @@ import abilityLang from "../mocks/abilityLang.json";
 	<section id="projects" class="p-10 flex flex-col w-full">
 		<h1 class="text-4xl text-center opacity-80 font-bold my-10">Proyectos</h1>
 		<div
-			class="grid overflow-auto lg:max-h-full max-h-[70dvh] justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:mx-[15%]"
+			class="grid overflow-auto lg:max-h-full max-h-[70dvh] justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 lg:mx-[15%]"
 		>
 			{
 				projects.map((project) => (
-					<article class="bg-neutral-700 shadow-lg rounded-xl lg:overflow-hidden">
-						<header class="h-40 overflow-hidden">
+					<article class="bg-neutral-700 relative shadow-lg flex flex-col rounded-xl lg:overflow-hidden">
+						<header class="overflow-hidden max-h-52">
 							<img
 								class="hover:scale-105 grayscale-[0.7] hover:grayscale-0 transition-all rounded-t-xl object-cover"
-								src={project.image}
+								src={project.image || "https://via.placeholder.com/1280x720"}
 								alt="sd"
 							/>
 						</header>
-						<div class="p-6">
+						<div class="p-6 md:h-80">
 							<h3 class="text-2xl font-bold">{project.title}</h3>
 							<p class="text-xl opacity-80 mt-1">{project.description}</p>
+							<div class="my-4">
+								{project.languages.map((lang) => (
+									<span class="bg-gray-600 capitalize text-white text-sm px-2 py-1 rounded-md mr-2 mt-2">
+										{lang}
+									</span>
+								))}
+							</div>
 						</div>
-						<div class="flex gap-2 p-5">
+						<div class="flex gap-2 p-5 md:absolute bottom-0 w-full">
 							<a
 								class="bg-gray-600 flex items-center justify-center shadow-lg rounded-md text-white w-full text-center py-2 hover:bg-gray-700"
 								href="#"
@@ -127,7 +140,7 @@ import abilityLang from "../mocks/abilityLang.json";
 						))
 					}
 				</div>
-			</article>			
+			</article>
 			<article class="flex flex-1 flex-col text-center gap-10">
 				<h1 class="text-3xl opacity-70 font-bold">En proceso || Poco uso</h1>
 				<div
@@ -143,7 +156,7 @@ import abilityLang from "../mocks/abilityLang.json";
 						))
 					}
 				</div>
-			</article>			
+			</article>
 		</div>
 	</section>
 </Layout>
