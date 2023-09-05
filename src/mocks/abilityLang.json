@@ -1,0 +1,66 @@
+{
+  "mostUsed": [
+    {
+      "name": "vscode-icons:file-type-html",
+      "title": "HTML"
+    },
+    {
+      "name": "logos:javascript",
+      "title": "JavaScript"
+    },
+    {
+      "name": "logos:typescript-icon",
+      "title": "TypeScript"
+    },
+    {
+      "name": "logos:react",
+      "title": "React"
+    },
+    {
+      "name": "logos:tailwindcss-icon",
+      "title": "Tailwind CSS"
+    },
+    {
+      "name": "logos:nextjs",
+      "title": "Next.js"
+    },
+    {
+      "name": "logos:nestjs",
+      "title": "NestJS"
+    },
+    {
+      "name": "vscode-icons:file-type-node",
+      "title": "Node.js"
+    },
+    {
+      "title": "MONGODB",
+      "name": "vscode-icons:file-type-mongo"
+    }
+  ],
+  "lessUsed": [
+    {
+      "title": "Astro",
+      "name": "logos:astro"
+    },
+    {
+      "title": "SQL",
+      "name": "vscode-icons:file-type-sql"
+    },
+    {
+      "title": "Sass",
+      "name": "vscode-icons:file-type-sass"
+    },
+    {
+      "title": "Prisma",
+      "name": "logos:prisma"
+    },
+    {
+      "title": "Vue JS",
+      "name": "logos:vue"
+    },
+    {
+      "title": "React Native",
+      "name": "logos:react"
+    }
+  ]
+}

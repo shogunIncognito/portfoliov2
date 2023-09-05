@@ -3,8 +3,9 @@ import Layout from "../layouts/Layout.astro";
 import { Icon } from "astro-icon";
 import projects from "../mocks/projects.json";
 import { Image } from "astro:assets";
-import myImage from '../assets/myimage.jpg'
+import myImage from "../assets/myimage.jpg";
 import AbilityIcon from "../components/AbilityIcon.astro";
+import abilityLang from "../mocks/abilityLang.json";
 ---
 
 <Layout>
@@ -30,21 +31,21 @@ import AbilityIcon from "../components/AbilityIcon.astro";
 					href="mailto:saidsamuel2006@hotmail.com"
 					rel="noreferrer"
 				>
-					<Icon name="fluent:mail-16-filled" class="w-11" />
+					<Icon name="fluent:mail-16-filled" class="w-11 transition-colors hover:text-red-500" />
 				</a>
 				<a
 					target="_blank"
 					href="https://github.com/shogunIncognito"
 					rel="noreferrer"
 				>
-					<Icon name="mdi:github" class="w-11" />
+					<Icon name="mdi:github" class="w-11 transition-colors hover:text-red-500" />
 				</a>
 				<a
 					target="_blank"
 					href="https://www.linkedin.com/in/samuel-aya/"
 					rel="noreferrer"
 				>
-					<Icon name="mdi:linkedin" class="w-11" />
+					<Icon name="mdi:linkedin" class="w-11 transition-colors hover:text-red-500" />
 				</a>
 			</div>
 		</div>
@@ -54,7 +55,10 @@ import AbilityIcon from "../components/AbilityIcon.astro";
 			<p
 				class="text-2xl max-w-[20ch] md:max-w-[45ch] rainbow-text animated flex flex-col"
 			>
-				<Icon name="logos:react" class='w-40 my-10 self-center hover:animate-spin' />
+				<Icon
+					name="logos:react"
+					class="w-40 my-10 self-center spining"
+				/>
 				 Amante del desarrollo de software en la creación de soluciones
 				tecnológicas innovadoras.
 			</p>
@@ -68,7 +72,7 @@ import AbilityIcon from "../components/AbilityIcon.astro";
 	<section id="projects" class="p-10 flex flex-col w-full">
 		<h1 class="text-4xl text-center opacity-80 font-bold my-10">Proyectos</h1>
 		<div
-			class="grid overflow-auto lg:max-h-full max-h-[70dvh] justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:mx-[20%]"
+			class="grid overflow-auto lg:max-h-full max-h-[70dvh] justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:mx-[15%]"
 		>
 			{
 				projects.map((project) => (
@@ -89,7 +93,7 @@ import AbilityIcon from "../components/AbilityIcon.astro";
 								class="bg-gray-600 flex items-center justify-center shadow-lg rounded-md text-white w-full text-center py-2 hover:bg-gray-700"
 								href="#"
 							>
-								<Icon name="fluent:mail-16-filled" class="w-8" />
+								<Icon name="ph:eye-light" class="w-8" />
 							</a>
 							<a
 								class="bg-gray-600 flex justify-center items-center shadow-lg rounded-md text-white w-full text-center py-2 hover:bg-gray-700"
@@ -106,18 +110,40 @@ import AbilityIcon from "../components/AbilityIcon.astro";
 
 	<section class="mb-20">
 		<h1 class="text-center text-4xl opacity-80 font-bold my-10">Habilidades</h1>
-		<div
-			id="ability"
-			class="flex lg:mx-[25%] p-5 justify-center items-center gap-10 flex-wrap"
-		>
-			<AbilityIcon name="vscode-icons:file-type-html" />
-			<AbilityIcon name="logos:javascript" />
-			<AbilityIcon name="logos:typescript-icon" />
-			<AbilityIcon name="logos:react" />
-			<AbilityIcon name="logos:tailwindcss-icon" />
-			<AbilityIcon name="logos:nextjs" />
-			<AbilityIcon name="logos:nestjs" />
-			<AbilityIcon name="vscode-icons:file-type-node" />
+
+		<div class="flex flex-col md:flex-row gap-20 h-full">
+			<article class="flex flex-1 flex-col text-center gap-10">
+				<h1 class="text-3xl opacity-70 font-bold">Usados</h1>
+				<div
+					id="ability"
+					class="flex p-5 justify-center items-center gap-10 flex-wrap"
+				>
+					{
+						abilityLang.mostUsed.map((lang) => (
+							<div class="text-center">
+								<AbilityIcon name={lang.name} />
+								<h2 class="mt-3">{lang.title}</h2>
+							</div>
+						))
+					}
+				</div>
+			</article>			
+			<article class="flex flex-1 flex-col text-center gap-10">
+				<h1 class="text-3xl opacity-70 font-bold">En proceso || Poco uso</h1>
+				<div
+					id="ability"
+					class="flex p-5 justify-center items-center gap-10 flex-wrap"
+				>
+					{
+						abilityLang.lessUsed.map((lang) => (
+							<div class="text-center">
+								<AbilityIcon name={lang.name} />
+								<h2 class="mt-3">{lang.title}</h2>
+							</div>
+						))
+					}
+				</div>
+			</article>			
 		</div>
 	</section>
 </Layout>
