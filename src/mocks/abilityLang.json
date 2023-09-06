@@ -5,6 +5,10 @@
       "title": "HTML"
     },
     {
+      "title": "CSS",
+      "name": "vscode-icons:file-type-css"
+    },
+    {
       "name": "logos:javascript",
       "title": "JavaScript"
     },
@@ -33,7 +37,7 @@
       "title": "Node.js"
     },
     {
-      "title": "MONGODB",
+      "title": "MongoDB",
       "name": "vscode-icons:file-type-mongo"
     }
   ],
