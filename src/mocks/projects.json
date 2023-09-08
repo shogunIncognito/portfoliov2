@@ -4,9 +4,9 @@
     "title": "project1",
     "description": "project1 description",
     "languages": [
-      "html",
-      "css",
-      "javascript"
+      "HTML",
+      "CSS",
+      "Javascript"
     ],
     "image": "https://www.latevaweb.com/diseno-web/cima-farmacias-diseno.jpg"
   },
@@ -24,9 +24,9 @@
     "title": "sportify",
     "description": "postiaoetkson",
     "languages": [
-      "html",
-      "css",
-      "javascript"
+      "HTML",
+      "CSS",
+      "Javascript"
     ],"image": "https://www.latevaweb.com/diseno-web/cima-farmacias-diseno.jpg"
   },
   {
@@ -34,9 +34,9 @@
     "title": "farmacia",
     "description": "farmacio description",
     "languages": [
-      "html",
-      "css",
-      "javascript"
+      "HTML",
+      "CSS",
+      "Javascript"
     ],"image": "https://nexovirtual.net/wp-content/uploads/2022/09/diseno-tienda-online-ropa-mujer-pineberry.jpg"
   }
 ]

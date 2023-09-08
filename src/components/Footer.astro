@@ -1,22 +1,45 @@
 ---
-import {Icon} from 'astro-icon'
+import { Icon } from "astro-icon";
 ---
 
-<footer class='bg-[#1A1A1A] text-white gap-7 flex flex-col justify-center items-center p-5'>
-  <a class='font-bold' href='#'>BACK TO TOP</a>
-  <div class='flex gap-7'>
-    <a target='_blank' href='mailto:saidsamuel2006@hotmail.com' rel='noreferrer'>
-      <Icon name="fluent:mail-16-filled" class="w-12 hover:text-red-600 transition-colors" />
+<footer
+  class="bg-[#1A1A1A] text-white gap-7 flex flex-col justify-center items-center p-5"
+>
+  <a class="font-bold" href="#home">BACK TO TOP</a>
+  <div class="flex gap-7">
+    <a
+      target="_blank"
+      href="mailto:saidsamuel2006@hotmail.com"
+      rel="noreferrer"
+    >
+      <Icon
+        name="fluent:mail-16-filled"
+        class="w-12 hover:text-red-600 transition-colors"
+      />
     </a>
-    <a target='_blank' href='https://github.com/shogunIncognito' rel='noreferrer'>
-      <Icon name="mdi:github" class="w-12 hover:text-red-600 transition-colors" />
+    <a
+      target="_blank"
+      href="https://github.com/shogunIncognito"
+      rel="noreferrer"
+    >
+      <Icon
+        name="mdi:github"
+        class="w-12 hover:text-red-600 transition-colors"
+      />
     </a>
-    <a target='_blank' href='https://www.linkedin.com/in/samuel-aya/' rel='noreferrer'>
-      <Icon name="mdi:linkedin" class="w-12 hover:text-red-600 transition-colors" />
+    <a
+      target="_blank"
+      href="https://www.linkedin.com/in/samuel-aya/"
+      rel="noreferrer"
+    >
+      <Icon
+        name="mdi:linkedin"
+        class="w-12 hover:text-red-600 transition-colors"
+      />
     </a>
   </div>
-  <div class='flex opacity-60 flex-col justify-center items-center p-5'>
-    <p class='text-lg'>© {new Date().getFullYear()} Samuel Aya</p>
-    <p class='text-lg'>Todos los derechos reservados</p>
+  <div class="flex opacity-60 flex-col justify-center items-center p-5">
+    <p class="text-lg">© {new Date().getFullYear()} Samuel Aya</p>
+    <p class="text-lg">Todos los derechos reservados</p>
   </div>
 </footer>

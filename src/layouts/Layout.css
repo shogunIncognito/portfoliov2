@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
 html {
   scroll-behavior: smooth;
   margin: 0;
@@ -6,12 +8,13 @@ html {
 
 .landing-hero {
   position: relative;
-  background: linear-gradient(148deg,#0099ff8a,#0000 50%);
+  background: linear-gradient(160deg, #0863ccbb, #0000 50%);
 }
 
 body {
   background-color: #212121;
   color: white;
+  font-family: 'Lexend Deca', sans-serif;
 }
 
 .rainbow-text {
@@ -19,14 +22,14 @@ body {
   color: transparent;
   background-clip: text;
   background-size: 500%;
-  animation: color 35s linear infinite;    
+  animation: color 35s linear infinite;
 }
 
 .animated-text-write {
   display: block;
   white-space: nowrap;
   border-right: 4px solid;
-  width: 10ch;  
+  width: 10ch;
   animation: typing 1.4s steps(12), blink .5s infinite step-end alternate;
   overflow: hidden;
 }
@@ -35,7 +38,7 @@ body {
   @apply border-gray-700;
 }
 
-.spining {  
+.spining {
   animation: spin 15s linear infinite;
 }
 
@@ -46,24 +49,27 @@ body {
 }
 
 @keyframes typing {
-  from { width: 0 }
+  from {
+    width: 0
+  }
 }
 
-@keyframes blink {  
-  50% { border-color: transparent; }
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 
 @keyframes color {
   0% {
-      background-position: 0 0;
+    background-position: 0 0;
   }
 
   50% {
-      background-position: 400% 0;
+    background-position: 400% 0;
   }
 
   100% {
     background-position: 0 0;
   }
 }
-

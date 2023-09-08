@@ -6,11 +6,13 @@ import { Image } from "astro:assets";
 import myImage from "../assets/myimage.jpg";
 import AbilityIcon from "../components/AbilityIcon.astro";
 import abilityLang from "../mocks/abilityLang.json";
+import ProjectCard from "../components/ProjectCard.astro";
 ---
 
 <Layout>
 	<section
 		class="landing-hero md:flex-row flex-col h-4/5 flex items-center pt-10 overflow-hidden"
+		id="home"
 	>
 		<div
 			class="flex-1 font-bold lg:w-64 w-full mt-32 h-[70dvh] flex flex-col md:my-20 gap-2 justify-center items-center"
@@ -62,69 +64,32 @@ import abilityLang from "../mocks/abilityLang.json";
 			class="flex-1 font-bold lg:w-64 w-full m-10 md:ml-36 h-[70dvh] flex flex-col mb-20 gap-2 justify-center items-center"
 		>
 			<p
-				class="text-2xl max-w-[20ch] md:max-w-[45ch] rainbow-text animated flex flex-col"
+				class="text-2xl max-w-[20ch] md:max-w-[45ch] opacity-90 leading-9 animated flex flex-col"
 			>
 				<Icon name="logos:react" class="w-40 my-10 self-center spining" />
 				 Amante del desarrollo de software en la creación de soluciones
 				tecnológicas innovadoras.
 			</p>
-			<p class="text-2xl max-w-[20ch] md:max-w-[45ch] rainbow-text">
-				Mi objetivo es combinar mi pasión por la programación con mi deseo de
-				resolver problemas del mundo real.
+			<p class="text-2xl max-w-[20ch] md:max-w-[45ch] opacity-90 leading-9">
+				Con el objetivo de combinar mi pasión por la programación con mi deseo
+				de resolver problemas del mundo real.
 			</p>
 		</div>
 	</section>
 
 	<section id="projects" class="p-10 flex flex-col w-full">
-		<h1 class="text-4xl text-center opacity-80 font-bold my-10">Proyectos</h1>
+		<h1 class="text-4xl text-center opacity-80 font-bold my-16">Proyectos</h1>
 		<div
-			class="grid overflow-auto lg:max-h-full max-h-[70dvh] justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 lg:mx-[15%]"
+			class="grid odd:text-purple-200 overflow-auto lg:max-h-full max-h-[70dvh] justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 lg:mx-[15%]"
 		>
-			{
-				projects.map((project) => (
-					<article class="bg-neutral-700 relative shadow-lg flex flex-col rounded-xl lg:overflow-hidden">
-						<header class="overflow-hidden max-h-52">
-							<img
-								class="hover:scale-105 grayscale-[0.7] hover:grayscale-0 transition-all rounded-t-xl object-cover"
-								src={project.image || "https://via.placeholder.com/1280x720"}
-								alt="sd"
-							/>
-						</header>
-						<div class="p-6 md:h-80">
-							<h3 class="text-2xl font-bold">{project.title}</h3>
-							<p class="text-xl opacity-80 mt-1">{project.description}</p>
-							<div class="my-4">
-								{project.languages.map((lang) => (
-									<span class="bg-gray-600 capitalize text-white text-sm px-2 py-1 rounded-md mr-2 mt-2">
-										{lang}
-									</span>
-								))}
-							</div>
-						</div>
-						<div class="flex gap-2 p-5 md:absolute bottom-0 w-full">
-							<a
-								class="bg-gray-600 flex items-center justify-center shadow-lg rounded-md text-white w-full text-center py-2 hover:bg-gray-700"
-								href="#"
-							>
-								<Icon name="ph:eye-light" class="w-8" />
-							</a>
-							<a
-								class="bg-gray-600 flex justify-center items-center shadow-lg rounded-md text-white w-full text-center py-2 hover:bg-gray-700"
-								href="#"
-							>
-								<Icon name="mdi:github" class="w-8" />
-							</a>
-						</div>
-					</article>
-				))
-			}
+			{projects.map((project) => <ProjectCard project={project} />)}
 		</div>
 	</section>
 
 	<section class="mb-20">
 		<h1 class="text-center text-4xl opacity-80 font-bold my-10">Habilidades</h1>
 
-		<div class="flex flex-col md:flex-row gap-20 h-full">
+		<div class="flex flex-col md:flex-row gap-20 h-full lg:mx-32">
 			<article class="flex flex-1 flex-col text-center gap-10">
 				<h1 class="text-3xl opacity-70 font-bold">Usados</h1>
 				<div
