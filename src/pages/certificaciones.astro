@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro";
+import certifications from "../mocks/certifications.json";
+---
+
+<Layout>
+  <section id="home" class="m-5 mt-28 flex flex-col text-center">
+    <h2 class="text-4xl my-4">Certificaciones</h2>
+
+    <div class="grid grid-template gap-10 md:m-20">
+      {
+        certifications.map((cer) => (
+          <article class="flex flex-col gap-2">
+            <h2 class="text-xl">{cer.title}</h2>
+            <a target="_blank" href={cer.image}>
+              <img src={cer.image} class="w-full rounded" alt={cer.title} />
+            </a>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .grid-template {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+</style>

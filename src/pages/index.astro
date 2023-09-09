@@ -74,6 +74,18 @@ import ProjectCard from "../components/ProjectCard.astro";
 				Con el objetivo de combinar mi pasión por la programación con mi deseo
 				de resolver problemas del mundo real.
 			</p>
+			<div class="flex gap-2 w-52 lg:flex-row flex-col justify-center">
+				<a
+					href="/certificaciones"
+					class="border-2 px-6 py-3 rounded-md hover:bg-white transition-colors duration-300 hover:text-black mt-4"
+					>Certificaciones</a
+				>
+				<a
+					href="#"
+					class="border-2 px-6 py-3 rounded-md hover:bg-white transition-colors duration-300 hover:text-black mt-4"
+					>CV</a
+				>
+			</div>
 		</div>
 	</section>
 
@@ -86,16 +98,13 @@ import ProjectCard from "../components/ProjectCard.astro";
 		</div>
 	</section>
 
-	<section class="mb-20">
+	<section class="mb-20 pt-16" id="ability">
 		<h1 class="text-center text-4xl opacity-80 font-bold my-10">Habilidades</h1>
 
 		<div class="flex flex-col md:flex-row gap-20 h-full lg:mx-32">
 			<article class="flex flex-1 flex-col text-center gap-10">
 				<h1 class="text-3xl opacity-70 font-bold">Usados</h1>
-				<div
-					id="ability"
-					class="flex p-5 justify-center items-center gap-10 flex-wrap"
-				>
+				<div class="flex p-5 justify-center items-center gap-10 flex-wrap">
 					{
 						abilityLang.mostUsed.map((lang) => (
 							<div class="text-center">
@@ -108,10 +117,7 @@ import ProjectCard from "../components/ProjectCard.astro";
 			</article>
 			<article class="flex flex-1 flex-col text-center gap-10">
 				<h1 class="text-3xl opacity-70 font-bold">En proceso || Poco uso</h1>
-				<div
-					id="ability"
-					class="flex p-5 justify-center items-center gap-10 flex-wrap"
-				>
+				<div class="flex p-5 justify-center items-center gap-10 flex-wrap">
 					{
 						abilityLang.lessUsed.map((lang) => (
 							<div class="text-center">

@@ -1,14 +1,12 @@
 [
   {
     "id": 1,
-    "title": "project1",
-    "description": "project1 description",
+    "title": "Spotify clon",
+    "description": "Clon de la interfaz de la plataforma de musica 'Spotify'",
     "languages": [
-      "HTML",
-      "CSS",
-      "Javascript"
+      "Astro"
     ],
-    "image": "https://www.latevaweb.com/diseno-web/cima-farmacias-diseno.jpg"
+    "image": "https://firebasestorage.googleapis.com/v0/b/adminpanelphotos.appspot.com/o/images%2FfotosProyectosPort%2Fspotifyclon.PNG?alt=media&token=e4ed216a-881a-4d56-8a27-54a8cec8511a"
   },
   {
     "id": 2,

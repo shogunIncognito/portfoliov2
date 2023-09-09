@@ -1,5 +1,26 @@
 ---
-
+const routes = [
+  {
+    path: "/#home",
+    title: "Acerca de mi",
+  },
+  {
+    path: "/#projects",
+    title: "Proyectos",
+  },
+  {
+    path: "/#ability",
+    title: "Habilidades",
+  },
+  {
+    path: "/certificaciones",
+    title: "Certificaciones",
+  },
+  {
+    path: '/cv',
+    title: 'CV'
+  }
+];
 ---
 
 <script>
@@ -22,28 +43,22 @@
 <header class="transition-all header-nav top-0 w-full px-5 py-3 fixed z-20">
   <nav class="flex w-full md:justify-between justify-center items-center p-5">
     <a
-      href="#home"
+      href="/#home"
       class="font-extrabold text-transparent text-2xl md:text-2xl rainbow-text text-black"
       >Samuel Aya
     </a>
     <ul class="md:flex hidden">
       <li>
-        <a
-          class="py-3 cursor-pointer px-4 border-2 border-transparent hover:border-white transition-colors rounded-md"
-          href="#home">Acerca de mi</a
-        >
-      </li>
-      <li>
-        <a
-          class="py-3 cursor-pointer px-4 border-2 border-transparent hover:border-white transition-colors rounded-md"
-          href="#projects">Proyectos</a
-        >
-      </li>
-      <li>
-        <a
-          class="py-3 cursor-pointer px-4 border-2 border-transparent hover:border-white transition-colors rounded-md"
-          href="#ability">Habilidades</a
-        >
+        {
+          routes.map((route) => (
+            <a
+              class="py-3 cursor-pointer px-4 border-2 border-transparent hover:border-white transition-colors rounded-md"
+              href={route.path}
+            >
+              {route.title}
+            </a>
+          ))
+        }
       </li>
     </ul>
   </nav>
