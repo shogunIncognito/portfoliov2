@@ -6,7 +6,9 @@
     "languages": [
       "Astro"
     ],
-    "image": "https://firebasestorage.googleapis.com/v0/b/adminpanelphotos.appspot.com/o/images%2FfotosProyectosPort%2Fspotifyclon.PNG?alt=media&token=e4ed216a-881a-4d56-8a27-54a8cec8511a"
+    "image": "https://firebasestorage.googleapis.com/v0/b/adminpanelphotos.appspot.com/o/images%2FfotosProyectosPort%2Fspotifyclon.PNG?alt=media&token=e4ed216a-881a-4d56-8a27-54a8cec8511a",
+    "link": "https://spotifyclon-tau.vercel.app/",
+    "github": "https://github.com/shogunIncognito/spotifyclon"
   },
   {
     "id": 2,
@@ -15,26 +17,9 @@
     "languages": [
       "React",
       "TailwindCSS"
-    ],"image": "https://i.ibb.co/TtCrv6v/clothes-App.png"
-  },
-  {
-    "id": 3,
-    "title": "sportify",
-    "description": "postiaoetkson",
-    "languages": [
-      "HTML",
-      "CSS",
-      "Javascript"
-    ],"image": "https://www.latevaweb.com/diseno-web/cima-farmacias-diseno.jpg"
-  },
-  {
-    "id": 4,
-    "title": "farmacia",
-    "description": "farmacio description",
-    "languages": [
-      "HTML",
-      "CSS",
-      "Javascript"
-    ],"image": "https://nexovirtual.net/wp-content/uploads/2022/09/diseno-tienda-online-ropa-mujer-pineberry.jpg"
+    ],
+    "image": "https://i.ibb.co/TtCrv6v/clothes-App.png",
+    "link": "https://clothestoreramon.netlify.app/",
+    "github": "https://github.com/shogunIncognito/clothesApp"
   }
 ]
