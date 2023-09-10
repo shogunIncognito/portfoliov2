@@ -29,7 +29,6 @@ body {
   display: block;
   white-space: nowrap;
   border-right: 4px solid;
-  width: 10ch;
   animation: typing 1.4s steps(12), blink .5s infinite step-end alternate;
   overflow: hidden;
 }
