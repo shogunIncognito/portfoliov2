@@ -3,6 +3,8 @@ import { ViewTransitions } from "astro:transitions";
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
 import "./Layout.css";
+
+const { noFooter = false } = Astro.props;
 ---
 
 <!doctype html>
@@ -21,7 +23,6 @@ import "./Layout.css";
 		<main transition:animate="fade">
 			<slot />
 		</main>
-		<Footer />
-	</body>
+		{!noFooter && <Footer />}
+	</body><style is:global></style>
 </html>
-<style is:global></style>
