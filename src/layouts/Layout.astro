@@ -4,6 +4,10 @@ import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
 import "./Layout.css";
 
+interface Props {
+	noFooter?: boolean;
+}
+
 const { noFooter = false } = Astro.props;
 ---
 
