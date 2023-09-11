@@ -1,4 +1,5 @@
 ---
+import { Icon } from "astro-icon";
 const routes = [
   {
     path: "/#home",
@@ -17,9 +18,9 @@ const routes = [
     title: "Certificaciones",
   },
   {
-    path: '/cv',
-    title: 'CV'
-  }
+    path: "/cv",
+    title: "CV",
+  },
 ];
 ---
 
@@ -40,8 +41,16 @@ const routes = [
   window.addEventListener("scroll", handleScroll);
 </script>
 
-<header transition:persist class="transition-all header-nav top-0 w-full px-5 py-3 fixed z-20">
-  <nav class="flex w-full md:justify-between justify-center items-center p-5">
+<header
+  transition:persist
+  class="transition-all header-nav top-0 w-full px-5 py-3 fixed z-20"
+>
+  <nav
+    class="flex w-full md:justify-between relative justify-center items-center p-5"
+  >
+    <a href="/" class="absolute left-0">
+      <Icon name="teenyicons:home-outline" class="w-7" />
+    </a>
     <a
       href="/#home"
       class="font-extrabold text-transparent text-2xl md:text-2xl rainbow-text text-black"
