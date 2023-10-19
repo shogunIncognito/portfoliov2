@@ -8,23 +8,30 @@ import Icon from "astro-icon";
 <Layout noFooter>
   <section class="h-screen w-full flex justify-center items-center">
     <article
-      class="bg-neutral-600 flex h-max justify-center items-center max-w-3xl gap-2 rounded-md shadow-lg overflow-hidden"
+      class="bg-neutral-600 md:flex-row flex-col flex max-w-3xl lg:max-w-6xl gap-2 rounded-md shadow-lg overflow-hidden lg:m-0 m-4 mt-48"
     >
-      <div id="sidecontent" class="bg-neutral-400 h-full text-black flex flex-col">
-        <div class="flex justify-center items-center flex-col p-5">
-          <Image src={myImage} alt="me" class="w-44 select-none pointer-events-none my-4 rounded-full" />
+      <div class="bg-neutral-400 relative text-black flex flex-col">
+        <div class="flex justify-center items-center gap-2 flex-col p-5">
+          <Image
+            src={myImage}
+            alt="me"
+            class="w-44 select-none pointer-events-none my-4 rounded-full"
+          />
           <h2 class="text-xl my-2 font-bold">Said Samuel Aya Franco</h2>
-          <p class="text-md">Desarrollador de Software</p>
+          <p class="text-md mb-16">Desarrollador de Software</p>
         </div>
         <div
-          class="flex gap-4 justify-center p-2 bg-neutral-300 items-center mt-5"
+          class="flex gap-4 absolute w-full bottom-0 justify-center p-2 bg-neutral-300 items-center mt-5"
         >
           <a
             target="_blank"
             href="mailto:saidsamuel2006@hotmail.com"
             rel="noreferrer"
           >
-            <Icon name="fluent:mail-16-filled" class="w-9 transition-colors hover:text-neutral-500" />
+            <Icon
+              name="fluent:mail-16-filled"
+              class="w-9 transition-colors hover:text-neutral-500"
+            />
           </a>
           <a
             target="_blank"
@@ -41,7 +48,10 @@ import Icon from "astro-icon";
             href="https://www.linkedin.com/in/samuel-aya/"
             rel="noreferrer"
           >
-            <Icon name="mdi:linkedin" class="w-9 transition-colors hover:text-neutral-500" />
+            <Icon
+              name="mdi:linkedin"
+              class="w-9 transition-colors hover:text-neutral-500"
+            />
           </a>
         </div>
       </div>
@@ -49,7 +59,13 @@ import Icon from "astro-icon";
       <div class="flex-1 m-4">
         <h3 class="text-3xl font-bold text-center mb-7 self-start">¡Hola!</h3>
         <p class="text-lg">
-          Soy un estudiante de Desarrollo de Software con experiencia en la creación de proyectos personales utilizando diversas tecnologías, tales como React, Next.js y Tailwind CSS. Además, he trabajado en el desarrollo de APIs con Node.js y he participado en proyectos colaborativos. Me gusta practicar constantemente para adquirir nuevas habilidades y mejorar mis conocimientos en el campo del desarrollo de software.
+          Soy un estudiante de Desarrollo de Software con experiencia en la
+          creación de proyectos personales utilizando diversas tecnologías,
+          tales como React, Next.js y Tailwind CSS. Además, he trabajado en el
+          desarrollo de APIs con Node.js y he participado en proyectos
+          colaborativos. Me gusta practicar constantemente para adquirir nuevas
+          habilidades y mejorar mis conocimientos en el campo del desarrollo de
+          software.
         </p>
 
         <div class="mt-5">
@@ -58,7 +74,7 @@ import Icon from "astro-icon";
             <li>
               <p>
                 <span class="font-bold">Universidad Minuto de Dios</span> -
-                Tecnologia en Desarrollo de Software
+                Tecnología en Desarrollo de Software
               </p>
               <small>2022 - 2024</small>
             </li>
