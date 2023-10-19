@@ -1,12 +1,12 @@
 {
   "mostUsed": [
     {
-      "name": "vscode-icons:file-type-html",
-      "title": "HTML"
+      "title": "HTML",
+      "name": "vscode-icons:file-type-html"
     },
     {
-      "title": "CSS",
-      "name": "vscode-icons:file-type-css"
+      "name": "vscode-icons:file-type-css",
+      "title": "CSS"
     },
     {
       "name": "logos:javascript",
@@ -39,6 +39,10 @@
     {
       "title": "MongoDB",
       "name": "vscode-icons:file-type-mongo"
+    },
+    {
+      "title": "Prisma",
+      "name": "logos:prisma"
     }
   ],
   "lessUsed": [
@@ -53,11 +57,7 @@
     {
       "title": "Sass",
       "name": "vscode-icons:file-type-sass"
-    },
-    {
-      "title": "Prisma",
-      "name": "logos:prisma"
-    },
+    },    
     {
       "title": "Vue JS",
       "name": "logos:vue"
