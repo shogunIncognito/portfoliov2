@@ -37,7 +37,7 @@
   {
     "id": 4,
     "title": "Buscador de peliculas",
-    "description": "Sitio web simple de una tienda de ropa, con un carrito de compras y simulación de pago.",
+    "description": "App de busqueda de peliculas, mediante el uso de la api de 'omdbapi'.",
     "languages": [
       "Vue",
       "TailwindCSS"
