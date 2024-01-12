@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Spotify clon",
-    "description": "Clon de la interfaz de la plataforma de musica 'Spotify'",
+    "description": "Clon de la interfaz de la plataforma de música 'Spotify'",
     "languages": [
       "Astro",
       "TailwindCSS"
@@ -36,8 +36,8 @@
   },
   {
     "id": 4,
-    "title": "Buscador de peliculas",
-    "description": "App de busqueda de peliculas, mediante el uso de la api de 'omdbapi'.",
+    "title": "Buscador de películas",
+    "description": "App de búsqueda de películas, mediante el uso de la api de 'omdbapi'.",
     "languages": [
       "Vue",
       "TailwindCSS"
@@ -45,5 +45,34 @@
     "image": "https://firebasestorage.googleapis.com/v0/b/adminpanelphotos.appspot.com/o/images%2FfotosProyectosPort%2FinterfaceImageMovie.PNG?alt=media&token=118bfcea-577f-4bff-a5f6-85e318c7548b",
     "link": "https://moviesearchervue.netlify.app/",
     "github": "https://github.com/shogunIncognito/moviesearchervue"
+  },
+  {
+    "id": 5,
+    "title": "Live Chat",
+    "description": "Chat en tiempo real, usando SocketIo y un server en Express.",
+    "languages": [
+      "React",
+      "TailwindCSS",
+      "Express",
+      "SocketIo"
+    ],
+    "image": "https://firebasestorage.googleapis.com/v0/b/adminpanelphotos.appspot.com/o/images%2FfotosProyectosPort%2Flivechat.PNG?alt=media&token=feece3dd-a1d8-4dc5-9983-c2cd07b9a2df",
+    "link": "https://reactchatsocketio.onrender.com/",
+    "github": "https://github.com/shogunIncognito/reactchatsocketio"
+  },
+  {
+    "id": 6,
+    "title": "Aplicación web de MaxAutos V1",
+    "description": "App web de una empresa de venta de autos, con un panel de administración y catalogo de vehículos.",
+    "languages": [
+      "NextJS",
+      "TailwindCSS",
+      "MySql",
+      "Prisma",
+      "Firebase"
+    ],
+    "image": "https://firebasestorage.googleapis.com/v0/b/adminpanelphotos.appspot.com/o/images%2FfotosProyectosPort%2Fmaxautospage.PNG?alt=media&token=f02b6d4b-3257-44d1-b46e-efa9ef1ea8b4",
+    "github": "https://github.com/shogunIncognito/simplemaxapp-pWeb",
+    "link": "https://simplemaxapp.vercel.app/"
   }
 ]
