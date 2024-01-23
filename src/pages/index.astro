@@ -29,7 +29,7 @@ import ProjectCard from "../components/ProjectCard.astro";
 				Samuel Aya
 			</h1>
 			<p class="text-xl opacity-50 mt-2">Desarrollador FullStack</p>
-			<div class="flex gap-4 my-5">
+			<div class="flex gap-2 my-5">
 				<a
 					target="_blank"
 					href="mailto:saidsamuel2006@hotmail.com"
@@ -37,7 +37,7 @@ import ProjectCard from "../components/ProjectCard.astro";
 				>
 					<Icon
 						name="fluent:mail-16-filled"
-						class="w-11 transition-colors hover:text-red-500"
+						class="w-11 transition-colors border-b-2 border-transparent hover:border-white"
 					/>
 				</a>
 				<a
@@ -47,7 +47,7 @@ import ProjectCard from "../components/ProjectCard.astro";
 				>
 					<Icon
 						name="mdi:github"
-						class="w-12 hover:text-black hover:bg-white rounded-full transition-colors"
+						class="w-11 transition-colors border-b-2 border-transparent hover:border-white"						
 					/>
 				</a>
 				<a
@@ -57,7 +57,7 @@ import ProjectCard from "../components/ProjectCard.astro";
 				>
 					<Icon
 						name="mdi:linkedin"
-						class="w-12 hover:text-blue-600 transition-colors"
+						class="w-11 transition-colors border-b-2 border-transparent hover:border-white"						
 					/>
 				</a>
 			</div>
@@ -69,12 +69,10 @@ import ProjectCard from "../components/ProjectCard.astro";
 				class="text-2xl max-w-[20ch] md:max-w-[45ch] opacity-90 leading-9 animated flex flex-col"
 			>
 				<Icon name="logos:react" class="w-40 my-10 self-center spining" />
-				En busca de la creación de soluciones tecnológicas
-				innovadoras.
+				En busca de la creación de soluciones tecnológicas innovadoras.
 			</p>
 			<p class="text-2xl max-w-[20ch] md:max-w-[45ch] opacity-90 leading-9">
-				Con el objetivo de combinar mi pasión por la programación con mi deseo
-				de resolver problemas del mundo real.
+				Con mi pasión por la programación deseo resolver problemas del mundo real.
 			</p>
 			<div class="flex gap-2 w-52 lg:flex-row flex-col justify-center">
 				<a
@@ -106,25 +104,12 @@ import ProjectCard from "../components/ProjectCard.astro";
 		<div class="flex flex-col md:flex-row gap-20 h-full lg:mx-32">
 			<article class="flex flex-1 flex-col text-center gap-10">
 				<h1 class="text-3xl opacity-70 font-bold">Usados</h1>
-				<div class="flex p-5 justify-center items-center gap-10 flex-wrap">
+				<div class="p-5 grid grid-cols-2 items-center md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-8">
 					{
 						abilityLang.mostUsed.map((lang) => (
-							<div class="text-center">
+							<div class="text-center flex flex-col items-center">
 								<AbilityIcon name={lang.name} />
-								<h2 class="mt-3">{lang.title}</h2>
-							</div>
-						))
-					}
-				</div>
-			</article>
-			<article class="flex flex-1 flex-col text-center gap-10">
-				<h1 class="text-3xl opacity-70 font-bold">En proceso || Poco uso</h1>
-				<div class="flex p-5 justify-center items-center gap-10 flex-wrap">
-					{
-						abilityLang.lessUsed.map((lang) => (
-							<div class="text-center">
-								<AbilityIcon name={lang.name} />
-								<h2 class="mt-3">{lang.title}</h2>
+								<h2 class="mt-4">{lang.title}</h2>
 							</div>
 						))
 					}

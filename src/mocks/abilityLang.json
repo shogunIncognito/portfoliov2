@@ -43,9 +43,7 @@
     {
       "title": "Prisma",
       "name": "logos:prisma"
-    }
-  ],
-  "lessUsed": [
+    },
     {
       "title": "Astro",
       "name": "logos:astro"
@@ -55,16 +53,8 @@
       "name": "vscode-icons:file-type-sql"
     },
     {
-      "title": "Sass",
-      "name": "vscode-icons:file-type-sass"
-    },    
-    {
       "title": "Vue JS",
       "name": "logos:vue"
-    },
-    {
-      "title": "React Native",
-      "name": "logos:react"
     }
   ]
 }
