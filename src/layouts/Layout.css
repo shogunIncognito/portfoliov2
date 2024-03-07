@@ -6,6 +6,12 @@ html {
   padding: 0;
 }
 
+.grid-col-res {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
 .landing-hero {
   position: relative;
   background: linear-gradient(160deg, #0863ccbb, #0000 50%);
