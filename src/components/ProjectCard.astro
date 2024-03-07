@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon";
+import { Image } from "astro:assets";
 
 const { project } = Astro.props;
 ---
@@ -8,15 +9,17 @@ const { project } = Astro.props;
   class="relative h-80 m-2 shadow-lg bg-cover flex flex-col rounded-md lg:overflow-hidden"
 >
   <header class="absolute rounded-md object-cover w-full h-full -z-10">
-    <img
-      class="hover:scale-105 rounded-md w-full h-full grayscale-[0.7] hover:grayscale-0 transition-all rounded-t-xl object-cover"
+    <Image
+      class:list="hover:scale-105 rounded-md w-full h-full grayscale-[0.7] hover:grayscale-0 transition-all rounded-t-xl object-cover"
+      width={600}      
+      height={600}
       src={project.image || "https://via.placeholder.com/1280x720"}
-      alt="sd"
+      alt="projectimg"
     />
   </header>
   <div class="bg-black/70 h-full rounded-md">
     <div class="p-6 h-full md:mt-3">
-      <h3 class="text-2xl font-bold">{project.title}</h3>
+      <h2 class="text-2xl font-bold">{project.title}</h2>
       <p class="text-xl opacity-80 mt-1">{project.description}</p>
       <div class="my-4">
         {
@@ -31,7 +34,7 @@ const { project } = Astro.props;
     <div class="flex w-full md:w-1/2 gap-2 p-5 absolute bottom-0">
       <a
         target="_blank"
-        href={project.link}
+        href={project.link || '#'}
         class:list={[
           "bg-neutral-600/75 transition-colors flex items-center justify-center shadow-lg rounded-md text-white w-full text-center py-2 hover:bg-neutral-600",
           { 'hidden': !project.link }

@@ -30,7 +30,7 @@ body {
   white-space: nowrap;
   border-right: 4px solid;
   animation: typing 1.4s steps(12), blink .5s infinite step-end alternate;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .header-nav {
