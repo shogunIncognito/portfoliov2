@@ -25,7 +25,7 @@
       "title": "Tailwind CSS"
     },
     {
-      "name": "logos:nextjs",
+      "name": "teenyicons:nextjs-solid",
       "title": "Next.js"
     },
     {
@@ -42,7 +42,7 @@
     },
     {
       "title": "Prisma",
-      "name": "logos:prisma"
+      "name": "simple-icons:prisma"
     },
     {
       "title": "Astro",
@@ -55,6 +55,22 @@
     {
       "title": "Vue JS",
       "name": "logos:vue"
+    },
+    {
+      "title": "Express",
+      "name": "simple-icons:express"
+    },
+    {
+      "title": "Vercel",
+      "name": "logos:vercel"
+    },
+    {
+      "title": "Git",
+      "name": "vscode-icons:file-type-git"
+    },
+    {
+      "title": "Vitest",
+      "name": "vscode-icons:file-type-vite"
     }
   ]
 }
