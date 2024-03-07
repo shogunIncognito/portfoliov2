@@ -6,19 +6,19 @@ import Icon from "astro-icon";
 ---
 
 <Layout noFooter>
-  <section class="h-screen w-full flex justify-center items-center">
+  <section class="h-max lg:mt-22 mt-4 p-16 w-full flex justify-center items-center">
     <article
-      class="bg-neutral-600 md:flex-row flex-col flex max-w-3xl lg:max-w-6xl gap-2 rounded-md shadow-lg overflow-hidden lg:m-0 m-4 mt-48"
+      class="bg-neutral-600 lg:flex-row flex-col flex max-w-3xl lg:max-w-6xl gap-2 rounded-md shadow-lg overflow-hidden lg:m-0 m-4 lg:mt-32"
     >
       <div class="bg-neutral-400 relative text-black flex flex-col">
-        <div class="flex justify-center items-center gap-2 flex-col p-5">
+        <div class="flex flex-1 justify-center items-center gap-2 flex-col p-5">
           <Image
             src={myImage}
             alt="me"
-            class="w-44 select-none pointer-events-none my-4 rounded-full"
+            class="w-44 select grayscale hover:grayscale-0 transition-all cursor-crosshair my-4 rounded-full"
           />
-          <h2 class="text-xl my-2 font-bold">Said Samuel Aya Franco</h2>
-          <p class="text-md mb-16">Estudiante de Desarrollo de Software</p>
+          <h2 class="text-xl my-1 font-bold">Said Samuel Aya Franco</h2>
+          <p class="text-md mb-16 opacity-80">Estudiante de Desarrollo de Software</p>
         </div>
         <div
           class="flex gap-4 absolute w-full bottom-0 justify-center p-2 bg-neutral-300 items-center mt-5"
@@ -61,24 +61,53 @@ import Icon from "astro-icon";
         <p class="text-lg">
           Soy un estudiante de Desarrollo de Software con experiencia en la
           creación de proyectos personales utilizando diversas tecnologías,
-          tales como React, Next.js y Tailwind CSS. Además, he trabajado en el
-          desarrollo de APIs con Node.js y he participado en proyectos
-          colaborativos. Me gusta practicar constantemente para adquirir nuevas
-          habilidades y mejorar mis conocimientos en el campo del desarrollo de
-          software.
+          tales como React, Next.js y Tailwind CSS.
+        </p>
+        <p class="text-lg">
+          Además, he trabajado en el desarrollo de APIs con Node.js y he
+          participado en proyectos colaborativos. Me gusta practicar
+          constantemente para adquirir nuevas habilidades y mejorar mis
+          conocimientos en el campo del desarrollo de software.
         </p>
 
-        <div class="mt-5">
-          <h2 class="text-xl">Estudios</h2>
-          <ul class="list-disc pl-5">
-            <li>
-              <p>
-                <span class="font-bold">Universidad Minuto de Dios</span> -
-                Tecnología en Desarrollo de Software
-              </p>
+        <div class="mt-5 m-4">
+          <h2 class="text-xl font-bold mb-5">Educación</h2>
+          <ol
+            class="relative text-gray-200 border-s border-gray-200  "
+          >
+            <li class="mb-10 ms-6">
+              <span
+                class="absolute flex items-center justify-center w-8 h-8 bg-black rounded-full -start-4 ring-4 ring-white  "
+              >
+                <Icon name="mdi:school" class="w-5" />
+              </span>
+              <h3 class="font-medium leading-tight">
+                Universidad Minuto de Dios
+              </h3>
+              <p class="text-sm">Tecnología en Desarrollo de Software</p>
               <small>2022 - 2024</small>
-            </li>
-          </ul>
+            </li>            
+          </ol>
+        </div>
+
+        <div class="mt-5 m-4">
+          <h2 class="text-xl font-bold mb-5">Experiencia</h2>
+          <ol
+            class="relative text-gray-200 border-s border-gray-200  "
+          >
+            <li class="mb-10 ms-6">
+              <span
+                class="absolute flex items-center justify-center w-8 h-8 bg-black rounded-full -start-4 ring-4 ring-white  "
+              >
+                <Icon name="mdi:briefcase" class="w-5" />
+              </span>
+              <h3 class="font-medium leading-tight">
+                Vit Sensors
+              </h3>
+              <p class="text-sm">Practicante de Desarrollo de Software</p>
+              <small>2024 feb - Actualmente</small>
+            </li>            
+          </ol>
         </div>
       </div>
     </article>
