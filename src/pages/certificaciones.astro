@@ -12,7 +12,7 @@ import certifications from "../mocks/certifications.json";
         certifications.map((cer) => (
           <article class="flex flex-col gap-5 hover:scale-105 transition-all">
             <h2 class="text-xl opacity-75">{cer.title}</h2>
-            <a target="_blank" href={cer.image}>
+            <a aria-label={cer.title} target="_blank" href={cer.image}>
               <img src={cer.image} class="w-full h-[230px] object-cover rounded" alt={cer.title} />
             </a>
           </article>

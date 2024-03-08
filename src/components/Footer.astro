@@ -7,34 +7,37 @@ import { Icon } from "astro-icon";
 >
   <a class="font-bold" href="#home">REGRESA ARRIBA</a>
   <div class="flex gap-7">
-    <a      
+    <a     
+      aria-label="Email de contacto"
       target="_blank"
       href="mailto:saidsamuel2006@hotmail.com"
       rel="noreferrer"
     >
       <Icon
         name="fluent:mail-16-filled"
-        class="w-12 hover:text-red-600 transition-colors"
+        class="w-12 border-b-2 border-transparent hover:border-white duration-300 transition-colors"
       />
     </a>
     <a
+      aria-label="Perfil de GitHub"
       target="_blank"
       href="https://github.com/shogunIncognito"
       rel="noreferrer"
     >
       <Icon
         name="mdi:github"
-        class="w-12 hover:text-black hover:bg-white rounded-full transition-colors"
+        class="w-12 border-b-2 border-transparent hover:border-white duration-300 transition-colors"
       />
     </a>
     <a
+      aria-label="Perfil de LinkedIn"
       target="_blank"
       href="https://www.linkedin.com/in/samuel-aya/"
       rel="noreferrer"
     >
       <Icon
         name="mdi:linkedin"
-        class="w-12 hover:text-blue-500 transition-colors"
+        class="w-12 border-b-2 border-transparent hover:border-white duration-300 transition-colors"
       />
     </a>
   </div>

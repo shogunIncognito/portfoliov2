@@ -48,10 +48,11 @@ const routes = [
   <nav
     class="flex w-full lg:justify-between relative justify-center items-center p-5"
   >
-    <a href="/#home" class="absolute left-0 lg:hidden">
+    <a aria-label="Inicio" href="/#home" class="absolute left-0 lg:hidden">
       <Icon name="teenyicons:home-outline" class="w-7" />
     </a>
     <a
+      aria-label="Inicio"
       href="/#home"
       class="font-extrabold text-transparent text-2xl lg:text-2xl rainbow-text text-black"
       >Samuel Aya
@@ -61,6 +62,7 @@ const routes = [
         {
           routes.map((route) => (
             <a
+              aria-label={route.title}
               class="py-3 cursor-pointer px-4 border-2 border-transparent hover:border-white transition-colors rounded-md"
               href={route.path}
             >
