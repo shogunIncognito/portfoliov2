@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import { Icon } from "astro-icon";
 import { Image } from "astro:assets";
 import myImage from "../assets/myimage.webp";
+import astronautaimg from "../assets/astronautaindex.webp";
 import AbilityIcon from "../components/AbilityIcon.astro";
 import abilityLang from "../mocks/abilityLang.json";
 import ProjectCard from "../components/ProjectCard.astro";
@@ -31,33 +32,36 @@ import projects from "../mocks/projects.js";
 			<p class="text-xl opacity-50 mt-2">Desarrollador FullStack</p>
 			<div class="flex gap-2 my-5">
 				<a
+					aria-label="Email"
 					target="_blank"
 					href="mailto:saidsamuel2006@hotmail.com"
 					rel="noreferrer"
 				>
 					<Icon
 						name="fluent:mail-16-filled"
-						class="w-11 transition-colors border-b-2 border-transparent hover:border-white"
+						class="w-11 transition-colors border-b-2 border-transparent hover:border-white duration-300"
 					/>
 				</a>
 				<a
+					aria-label="GitHub"
 					target="_blank"
 					href="https://github.com/shogunIncognito"
 					rel="noreferrer"
 				>
 					<Icon
 						name="mdi:github"
-						class="w-11 transition-colors border-b-2 border-transparent hover:border-white"
+						class="w-11 transition-colors border-b-2 border-transparent hover:border-white duration-300"
 					/>
 				</a>
 				<a
+					aria-label="LinkedIn"
 					target="_blank"
 					href="https://www.linkedin.com/in/samuel-aya/"
 					rel="noreferrer"
 				>
 					<Icon
 						name="mdi:linkedin"
-						class="w-11 transition-colors border-b-2 border-transparent hover:border-white"
+						class="w-11 transition-colors border-b-2 border-transparent hover:border-white duration-300"
 					/>
 				</a>
 			</div>
@@ -82,16 +86,52 @@ import projects from "../mocks/projects.js";
 			</p>
 			<div class="flex gap-2 w-52 lg:flex-row flex-col justify-center">
 				<a
+					aria-label="Certificaciones"
 					href="/certificaciones"
 					class="border-2 px-6 py-3 rounded-md hover:bg-white transition-colors duration-300 hover:text-black mt-4"
 					>Certificaciones</a
 				>
 				<a
+					aria-label="CV"
 					href="/cv"
 					class="border-2 px-6 py-3 rounded-md hover:bg-white transition-colors duration-300 hover:text-black mt-4"
 					>CV</a
 				>
 			</div>
+		</div>
+	</section>
+
+	<section
+		class="flex px-8 flex-col md:flex-row w-full justify-center items-center"
+	>
+		<div
+			class="flex justify-center items-center rotate-[220deg] md:rotate-0 shadow md:scale-x-[-1]"
+		>
+			<Image
+				src={astronautaimg}
+				alt="astronautimg"
+				class="animate-pulse pb-10 md:pt-28 w-72"
+			/>
+		</div>
+		<div
+			class="flex-1 sm:max-w-lg md:max-w-2xl lg:max-w-3xl flex flex-col gap-4 text-xl justify-center items-center"
+		>
+			<p>
+				Enfocado en el Frontend y Backend, con experiencia en el
+				desarrollo de aplicaciones web. Conocimientos en tecnologías
+				como
+				<span class="text-[#61DAFB]">React</span>,
+				<span class="text-[#afa3a3]">Next.js</span>,
+				<span class="text-[#98BD3D]">Node.js</span>,
+				<span class="text-[#ff4632]">NestJS</span>,
+				<span class="text-[#4DB33D]">MongoDB</span>, entre otras. Me
+				apasiona la programación y la resolución de problemas.
+			</p>
+			<p>
+				Actualmente me encuentro en la búsqueda de nuevas oportunidades,
+				donde pueda aportar mis conocimientos y habilidades para el
+				desarrollo de soluciones tecnológicas.
+			</p>
 		</div>
 	</section>
 
@@ -113,18 +153,21 @@ import projects from "../mocks/projects.js";
 
 		<div class="flex flex-col md:flex-row gap-20 h-full md:mx-16 lg:mx-48">
 			<article class="flex flex-1 flex-col text-center gap-10">
-			  <div class="p-5 grid items-center place-items-center grid-col-res">
-				{
-				  abilityLang.mostUsed.map((lang) => (
-					<div class="text-center flex flex-col items-center justify-self-center">
-					  <AbilityIcon name={lang.name} />
-					  <h2 class="mt-5 whitespace-nowrap">{lang.title}</h2>
-					</div>
-				  ))
-				}				
-			  </div>
+				<div
+					class="p-5 grid items-center place-items-center grid-col-res"
+				>
+					{
+						abilityLang.mostUsed.map((lang) => (
+							<div class="text-center flex flex-col items-center justify-self-center">
+								<AbilityIcon name={lang.name} />
+								<h2 class="mt-5 whitespace-nowrap">
+									{lang.title}
+								</h2>
+							</div>
+						))
+					}
+				</div>
 			</article>
-		  </div>
-		  
+		</div>
 	</section>
 </Layout>
