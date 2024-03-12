@@ -10,7 +10,7 @@ const { project } = Astro.props;
 >
   <header class="absolute rounded-md object-cover w-full h-full -z-10">
     <Image
-      class:list="hover:scale-105 rounded-md w-full h-full grayscale-[0.7] hover:grayscale-0 transition-all rounded-t-xl object-cover"
+      class:list="hover:scale-105 rounded-md w-full h-full grayscale-[0.7] hover:grayscale-0 transition-all object-cover"
       width={600}      
       height={600}
       src={project.image || "https://via.placeholder.com/1280x720"}
@@ -37,7 +37,7 @@ const { project } = Astro.props;
         target="_blank"
         href={project.link || '#'}
         class:list={[
-          "bg-neutral-600/75 transition-colors flex items-center justify-center shadow-lg rounded-md text-white w-full text-center py-2 hover:bg-neutral-600",
+          "bg-neutral-600/75 transition-all hover:scale-105 flex items-center justify-center shadow-lg rounded-md text-white w-full text-center py-2 hover:bg-neutral-600",
           { 'hidden': !project.link }
         ]}
       >
@@ -46,7 +46,7 @@ const { project } = Astro.props;
       <a
         aria-label="Ver código fuente"
         target="_blank"
-        class="bg-neutral-600/75 transition-colors flex justify-center items-center shadow-lg rounded-md text-white w-full text-center py-2 hover:bg-neutral-600"
+        class="bg-neutral-600/75 transition-all hover:scale-105 flex justify-center items-center shadow-lg rounded-md text-white w-full text-center py-2 hover:bg-neutral-600"
         href={project.github}
       >
         <Icon name="mdi:github" class="w-8" />

@@ -24,9 +24,22 @@ const { noFooter = false } = Astro.props;
 	</head>
 	<body>
 		<Navbar />
+		<div transition:persist>
+			<div id="progressbar"></div>
+			<div id="scrollpath"></div>
+		</div>
 		<main transition:animate="fade">
 			<slot />
 		</main>
 		{!noFooter && <Footer />}
-	</body><style is:global></style>
+		<style is:global></style>
+		<script>
+			let progress = document.getElementById("progressbar");
+			let totalHeight = document.body.scrollHeight - window.innerHeight;
+			window.onscroll = function () {
+				let progressHeight = (window.pageYOffset / totalHeight) * 100;
+				progress.style.height = progressHeight + "%";
+			};
+		</script>
+	</body>
 </html>
