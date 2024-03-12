@@ -21,7 +21,7 @@ export default [
     {
         id: 2,
         title: "Tienda de ropa 'DesignTee'",
-        description: "Sitio web simple de una tienda de ropa, con un carrito de compras y simulación de pago.",
+        description: "Sitio web simple de una tienda de ropa, con un carrito de compras.",
         languages: [
             "React",
             "TailwindCSS"
@@ -70,7 +70,7 @@ export default [
     {
         id: 6,
         title: "Aplicación web de MaxAutos V1",
-        description: "App web de una empresa de venta de autos, con un panel de administración y catalogo de vehículos.",
+        description: "App web de una empresa de venta de autos, con panel y catalogo",
         languages: [
             "NextJS",
             "TailwindCSS",

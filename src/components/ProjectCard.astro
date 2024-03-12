@@ -20,11 +20,11 @@ const { project } = Astro.props;
   <div class="bg-black/70 h-full rounded-md">
     <div class="p-6 h-full md:mt-3">
       <h2 class="text-2xl font-bold">{project.title}</h2>
-      <p class="text-xl opacity-80 mt-1">{project.description}</p>
-      <div class="my-4">
+      <p class="text-md lg:text-xl opacity-80 mt-1">{project.description}</p>
+      <div class="my-4 flex flex-wrap">
         {
           project.languages.map((lang) => (
-            <span class="bg-gray-600 capitalize text-white text-sm px-2 py-1 rounded-md mr-2 mt-2">
+            <span class="bg-gray-600 capitalize text-white text-sm px-2 py-1 rounded-md mr-2 mb-2">
               {lang}
             </span>
           ))
