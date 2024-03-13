@@ -6,7 +6,7 @@ const { project } = Astro.props;
 ---
 
 <article
-  class="relative h-80 m-2 hover:shadow-neutral-950 transition-all duration-500 shadow-lg bg-cover flex flex-col rounded-md lg:overflow-hidden hover:overflow-visible"
+  class="relative h-80 m-2 hover:shadow-neutral-950 transition-all duration-500 shadow-lg bg-cover flex flex-col rounded-md"
 >
   <header class="absolute rounded-md object-cover w-full h-full -z-10">
     <Image
@@ -23,21 +23,21 @@ const { project } = Astro.props;
       <p class="text-md lg:text-xl opacity-80 mt-1">{project.description}</p>
       <div class="my-4 flex flex-wrap">
         {
-          project.languages.map((lang) => (
-            <span class="bg-gray-600 capitalize text-white text-sm px-2 py-1 rounded-md mr-2 mb-2">
+          project.languages.map(lang => (
+            <span class="bg-[#811a1aef] capitalize text-white text-sm px-2 py-1 rounded-md mr-2 mb-2">
               {lang}
             </span>
           ))
         }
       </div>
     </div>
-    <div class="flex w-full md:w-1/2 gap-2 p-5 absolute bottom-0">
+    <div class="flex w-full justify-start items-start gap-2 p-5 absolute bottom-0">
       <a
         aria-label="Ver proyecto"
         target="_blank"
         href={project.link || '#'}
         class:list={[
-          "bg-neutral-800/75 transition-all flex items-center justify-center shadow-lg rounded-md text-white w-full text-center py-2 hover:bg-neutral-700/70",
+          "bg-neutral-800/75 ring-2 ring-white/20 transition-all flex w-1/3 items-center justify-center shadow-lg rounded-md text-white text-center py-2 hover:bg-neutral-700/70",
           { 'hidden': !project.link }
         ]}
       >
@@ -46,7 +46,7 @@ const { project } = Astro.props;
       <a
         aria-label="Ver código fuente"
         target="_blank"
-        class="bg-neutral-800/75 transition-all flex justify-center items-center shadow-lg rounded-md text-white w-full text-center py-2 hover:bg-neutral-700/70"
+        class="bg-neutral-800/75 ring-2 ring-white/20 transition-all flex w-1/3 justify-center items-center shadow-lg rounded-md text-white text-center py-2 hover:bg-neutral-700/70"
         href={project.github}
       >
         <Icon name="mdi:github" class="w-8" />

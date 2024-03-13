@@ -11,7 +11,7 @@ import Icon from "astro-icon";
 
 <Layout>
 	<section
-		class="landing-hero md:flex-row flex-col h-4/5 flex items-center pt-10 overflow-hidden"
+		class="landing-hero md:flex-row flex-col h-4/5 flex items-center pt-24 overflow-hidden"
 		id="home"
 	>
 		<div
@@ -66,7 +66,7 @@ import Icon from "astro-icon";
 			</div>
 		</div>
 		<div
-			class="flex-1 font-bold lg:w-64 w-full m-10 md:ml-36 h-[70dvh] flex flex-col mb-20 gap-2 justify-center items-center"
+			class="flex-1 font-bold lg:w-64 w-full m-10 md:ml-36 flex flex-col mb-20 gap-2 justify-center items-center"
 		>
 			<div class="flex w-full justify-center items-center">
 				<Icon name="teenyicons:nextjs-solid" class="animate-pulse transition-all w-36 my-10 self-center" />
@@ -82,7 +82,7 @@ import Icon from "astro-icon";
 				Con mi pasión por la programación deseo resolver problemas del
 				mundo real.
 			</p>
-			<div class="flex gap-2 w-52 lg:flex-row flex-col justify-center">
+			<div class="flex gap-2 w-52 mt-5 md:mt-2 lg:flex-row flex-col justify-center">
 				<a
 					aria-label="Certificaciones"
 					href="/certificaciones"
@@ -103,7 +103,7 @@ import Icon from "astro-icon";
 		class="flex px-8 flex-col md:flex-row w-full justify-center items-center"
 	>
 		<div
-			class="flex justify-center items-center rotate-[220deg] md:rotate-0 md:scale-x-[-1]"
+			class="flex justify-center items-center rotate-[220deg] md:hover:rotate-[80deg] transition-all duration-1000 md:rotate-0 md:scale-x-[-1]"
 		>
 			<Image
 				src={astronautaimg}
@@ -149,7 +149,7 @@ import Icon from "astro-icon";
 						abilityLang.mostUsed.map((lang) => (
 							<div class="text-center flex flex-col items-center justify-self-center">
 								<AbilityIcon name={lang.name} />
-								<h2 class="mt-5 whitespace-nowrap">
+								<h2 class="mt-5 opacity-90 whitespace-nowrap">
 									{lang.title}
 								</h2>
 							</div>
