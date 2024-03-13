@@ -11,7 +11,7 @@ import Icon from "astro-icon";
         class="opacity-80 md:hidden animate-bounce w-12 right-0 self-center"
     />
     <div
-        class="grid overflow-auto lg:max-h-full max-h-[50dvh] md:max-h-[70dvh] justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 lg:mx-[8%]"
+        class="projects-container grid overflow-auto lg:overflow-visible lg:max-h-full max-h-[50dvh] justify-center grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-5 lg:mx-[3%]"
     >
         {projects.map((project) => <ProjectCard project={project} />)}
     </div>
