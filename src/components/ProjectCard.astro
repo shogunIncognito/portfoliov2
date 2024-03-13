@@ -37,7 +37,7 @@ const { project } = Astro.props;
         target="_blank"
         href={project.link || '#'}
         class:list={[
-          "bg-neutral-800/75 transition-all flex items-center justify-center shadow-lg rounded-md text-white w-full text-center py-2 hover:bg-neutral-700",
+          "bg-neutral-800/75 transition-all flex items-center justify-center shadow-lg rounded-md text-white w-full text-center py-2 hover:bg-neutral-700/70",
           { 'hidden': !project.link }
         ]}
       >
@@ -46,7 +46,7 @@ const { project } = Astro.props;
       <a
         aria-label="Ver código fuente"
         target="_blank"
-        class="bg-neutral-800/75 transition-all flex justify-center items-center shadow-lg rounded-md text-white w-full text-center py-2 hover:bg-neutral-700"
+        class="bg-neutral-800/75 transition-all flex justify-center items-center shadow-lg rounded-md text-white w-full text-center py-2 hover:bg-neutral-700/70"
         href={project.github}
       >
         <Icon name="mdi:github" class="w-8" />
