@@ -5,8 +5,7 @@ import myImage from "../assets/myimage.webp";
 import astronautaimg from "../assets/astronautaindex.webp";
 import AbilityIcon from "../components/AbilityIcon.astro";
 import abilityLang from "../mocks/abilityLang.json";
-import ProjectCard from "../components/ProjectCard.astro";
-import projects from "../mocks/projects.js";
+import Projects from '../components/Projects.astro'
 import Icon from "astro-icon";
 ---
 
@@ -134,16 +133,7 @@ import Icon from "astro-icon";
 		</div>
 	</section>
 
-	<section id="projects" class="p-10 flex flex-col w-full">
-		<h1 class="text-4xl text-center opacity-80 font-bold my-16">
-			Proyectos
-		</h1>
-		<div
-			class="grid overflow-auto lg:max-h-full max-h-[70dvh] justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 lg:mx-[8%]"
-		>
-			{projects.map((project) => <ProjectCard project={project} />)}
-		</div>
-	</section>
+	<Projects />
 
 	<section class="mb-20 pt-16" id="ability">
 		<h2 class="text-center mx-2 text-3xl opacity-80 font-bold my-10">

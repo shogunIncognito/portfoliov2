@@ -2,7 +2,6 @@
 import { ViewTransitions } from "astro:transitions";
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
-import  SpeedInsights  from "@vercel/speed-insights/astro"
 import "./Layout.css";
 
 interface Props {
@@ -24,7 +23,6 @@ const { noFooter = false } = Astro.props;
 		<ViewTransitions />
 	</head>
 	<body>
-		<SpeedInsights />
 		<Navbar />
 		<div transition:persist>
 			<div id="progressbar"></div>
