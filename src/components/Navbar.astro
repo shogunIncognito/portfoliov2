@@ -1,28 +1,34 @@
 ---
 import Icon from "astro-icon";
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 
 const routes = [
   {
     path: "/#home",
-    title: "Acerca de mi",
+    title: t('nav.home'),
   },
   {
     path: "/#projects",
-    title: "Proyectos",
+    title: t('nav.projects'),
   },
   {
     path: "/#ability",
-    title: "Habilidades",
+    title: t('nav.abilities'),
   },
   {
     path: "/certificaciones",
-    title: "Certificaciones",
+    title: t('nav.certifications'),
   },
   {
     path: "/cv",
-    title: "CV",
+    title: t('nav.cv'),
   },
 ];
+
 ---
 
 <script>
@@ -65,7 +71,7 @@ const routes = [
             <a
               aria-label={route.title}
               class="py-3 cursor-pointer px-4 border-2 border-transparent hover:border-white transition-colors rounded-md"
-              href={route.path}
+              href={translatePath(route.path)}
             >
               {route.title}
             </a>
