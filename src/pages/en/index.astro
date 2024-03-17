@@ -1,0 +1,166 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import myImage from "../../assets/myimage.webp";
+import astronautaimg from "../../assets/astronautaindex.webp";
+import AbilityIcon from "../../components/AbilityIcon.astro";
+import abilityLang from "../../mocks/abilityLang.json";
+import Projects from "../../components/Projects.astro";
+import Icon from "astro-icon";
+---
+
+<Layout>
+	<section
+		class="landing-hero md:flex-row flex-col h-4/5 flex items-center pt-10 md:pt-24 overflow-hidden"
+		id="home"
+	>
+		<div
+			class="flex-1 font-bold lg:w-64 w-full mt-32 h-max flex flex-col md:my-20 gap-2 justify-center items-center"
+		>
+			<Image
+				src={myImage}
+				class="w-40 h-40 object-cover rounded-full my-3"
+				alt="myimage"
+			/>
+			<h2 class="md:text-4xl text-3xl mb-2">¡Hello!, I am</h2>
+			<h1
+				class="md:text-5xl text-4xl p-2 w-[10.8ch] text-center animated-text-write capitalize"
+			>
+				Samuel Aya
+			</h1>
+			<p class="text-xl opacity-50 mt-2">FullStack Developer</p>
+			<div class="flex gap-2 my-5">
+				<a
+					aria-label="Email"
+					target="_blank"
+					href="mailto:saidsamuel2006@hotmail.com"
+					rel="noreferrer"
+				>
+					<Icon
+						name="fluent:mail-16-filled"
+						class="w-11 transition-colors border-b-2 border-transparent hover:border-white duration-300"
+					/>
+				</a>
+				<a
+					aria-label="GitHub"
+					target="_blank"
+					href="https://github.com/shogunIncognito"
+					rel="noreferrer"
+				>
+					<Icon
+						name="mdi:github"
+						class="w-11 transition-colors border-b-2 border-transparent hover:border-white duration-300"
+					/>
+				</a>
+				<a
+					aria-label="LinkedIn"
+					target="_blank"
+					href="https://www.linkedin.com/in/samuel-aya/"
+					rel="noreferrer"
+				>
+					<Icon
+						name="mdi:linkedin"
+						class="w-11 transition-colors border-b-2 border-transparent hover:border-white duration-300"
+					/>
+				</a>
+			</div>
+		</div>
+		<div
+			class="flex-1 font-bold lg:w-64 w-full m-10 md:ml-36 flex flex-col mb-20 gap-2 justify-center items-center"
+		>
+			<div class="flex w-full justify-center items-center">
+				<Icon
+					name="teenyicons:nextjs-solid"
+					class="animate-pulse transition-all w-28 md:w-36 my-10 self-center"
+				/>
+			</div>
+			<p
+				class="text-2xl max-w-[20ch] md:max-w-[45ch] opacity-90 leading-9 animated flex flex-col"
+			>
+				In search of creating innovative technological solutions.
+			</p>
+			<p
+				class="text-2xl max-w-[20ch] md:max-w-[45ch] opacity-90 leading-9"
+			>
+				With my passion for programming I want to solve computer
+				problems. real world.
+			</p>
+			<div
+				class="flex gap-2 w-52 mt-5 md:mt-2 lg:flex-row flex-col justify-center"
+			>
+				<a
+					aria-label="Certificaciones"
+					href="/certificaciones"
+					class="border-2 px-6 py-3 rounded-md hover:bg-white transition-colors duration-300 hover:text-black mt-1 lg:mt-4"
+					>Certifications</a
+				>
+				<a
+					aria-label="CV"
+					href="/cv"
+					class="border-2 px-6 py-3 rounded-md hover:bg-white transition-colors duration-300 hover:text-black mt-1 lg:mt-4"
+					>CV</a
+				>
+			</div>
+		</div>
+	</section>
+
+	<section
+		class="flex px-8 flex-col overflow-hidden md:flex-row w-full justify-center items-center"
+	>
+		<div
+			class="flex justify-center items-center rotate-[220deg] md:hover:rotate-[80deg] transition-all duration-1000 md:rotate-0 md:scale-x-[-1]"
+		>
+			<Image
+				src={astronautaimg}
+				alt="astronautimg"
+				class="animate-pulse pb-10 md:pt-28 md:w-72 w-52"
+			/>
+		</div>
+		<div
+			class="flex-1 sm:max-w-lg md:max-w-2xl lg:max-w-3xl flex flex-col gap-4 text-xl justify-center items-center"
+		>
+			<p>
+				Focused on Frontend and Backend, with experience in Web
+				applications development. Knowledge of technologies as
+				<span class="text-[#61DAFB]">React</span>,
+				<span class="text-[#afa3a3]">Next.js</span>,
+				<span class="text-[#98BD3D]">Node.js</span>,
+				<span class="text-[#ff4632]">NestJS</span>,
+				<span class="text-[#4DB33D]">MongoDB</span>, among other. I
+				Passionate about programming and problem solving.
+			</p>
+			<p>
+				I am currently looking for new opportunities, where I can
+				contribute my knowledge and skills to the development of
+				technological solutions.
+			</p>
+		</div>
+	</section>
+
+	<Projects />
+
+	<section class="mb-20 pt-16" id="ability">
+		<h2 class="text-center mx-2 text-3xl opacity-80 font-bold my-10">
+			Tools and Technologies
+		</h2>
+
+		<div class="flex flex-col md:flex-row gap-20 h-full md:mx-16 lg:mx-48">
+			<article class="flex flex-1 flex-col text-center gap-10">
+				<div
+					class="p-5 grid items-center place-items-center grid-col-res"
+				>
+					{
+						abilityLang.mostUsed.map((lang) => (
+							<div class="text-center flex flex-col items-center justify-self-center">
+								<AbilityIcon name={lang.name} />
+								<h2 class="mt-5 opacity-90 whitespace-nowrap">
+									{lang.title}
+								</h2>
+							</div>
+						))
+					}
+				</div>
+			</article>
+		</div>
+	</section>
+</Layout>

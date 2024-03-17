@@ -1,12 +1,12 @@
 [
   {
     "id": 1,
-    "title": "HTML y CSS",
+    "title": "HTML & CSS",
     "image": "https://firebasestorage.googleapis.com/v0/b/adminpanelphotos.appspot.com/o/images%2FfotosCertificados%2Fcertificadohtmlcss.PNG?alt=media&token=18ccd985-f948-4071-8a76-d62f9b3a26c7"
   },
   {
     "id": 2,
-    "title": "JavaScript y Jquery",
+    "title": "JavaScript & Jquery",
     "image": "https://firebasestorage.googleapis.com/v0/b/adminpanelphotos.appspot.com/o/images%2FfotosCertificados%2Fjsjquerycertificado.PNG?alt=media&token=fe1d127e-c50c-41cd-8ae1-9e936c0bf725"
   }
 ]
