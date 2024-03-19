@@ -22,7 +22,7 @@ const lang = getLangFromUrl(Astro.url);
   </header>
   <div class="bg-black/70 h-full rounded-md">
     <div class="md:p-6 p-3 h-full flex-1 md:mt-3">
-      <h2 class="md:text-2xl text-xl font-bold">{project.title}</h2>
+      <h2 class="md:text-2xl text-xl font-bold">{project.title[lang]}</h2>
       <p class="text-md lg:text-xl opacity-80 mt-1">{project.description[lang]}</p>
       <div class="my-4 flex flex-wrap">
         {

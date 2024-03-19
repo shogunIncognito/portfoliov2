@@ -2,17 +2,21 @@
 import { ViewTransitions } from "astro:transitions";
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
+import LanguagesSwitcher from "../components/LanguagesSwitcher.astro";
 import "./Layout.css";
+import { getLangFromUrl } from "../i18n/utils";
 
 interface Props {
 	noFooter?: boolean;
 }
 
 const { noFooter = false } = Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <!doctype html>
-<html lang="es" class="light">
+<html lang={lang} class="light">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -23,7 +27,7 @@ const { noFooter = false } = Astro.props;
 		<ViewTransitions />
 	</head>
 	<body>
-		<Navbar />
+		<Navbar/>
 		<div transition:persist>
 			<div id="progressbar"></div>
 			<div id="scrollpath"></div>
@@ -43,3 +47,4 @@ const { noFooter = false } = Astro.props;
 		</script>
 	</body>
 </html>
+

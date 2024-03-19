@@ -1,6 +1,11 @@
 ---
 import Icon from "astro-icon";
-import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "../i18n/utils";
+import LanguagesSwitcher from "./LanguagesSwitcher.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -9,53 +14,34 @@ const translatePath = useTranslatedPath(lang);
 const routes = [
   {
     path: "/#home",
-    title: t('nav.home'),
+    title: t("nav.home"),
   },
   {
     path: "/#projects",
-    title: t('nav.projects'),
+    title: t("nav.projects"),
   },
   {
     path: "/#ability",
-    title: t('nav.abilities'),
+    title: t("nav.abilities"),
   },
   {
     path: "/certificaciones",
-    title: t('nav.certifications'),
+    title: t("nav.certifications"),
   },
   {
     path: "/cv",
-    title: t('nav.cv'),
+    title: t("nav.cv"),
   },
 ];
-
 ---
 
-<script>
-  const scrollClasses = ["bg-[#1A1515]", "border-b-2", "shadow-lg"];
-  const nav = document.querySelector(".header-nav");
-
-  const handleScroll = () => {
-    if (nav != null) {
-      if (window.scrollY > 60) {
-        nav.classList.add(...scrollClasses);
-      } else {
-        nav.classList.remove(...scrollClasses);
-      }
-    }
-  };
-
-  window.addEventListener("scroll", handleScroll);
-</script>
-
 <header
-  transition:persist
-  class="transition-all header-nav top-0 w-full px-5 py-3 fixed z-20"
+  class="transition-all header-nav top-0 w-full px-5 py-3 fixed z-20 bg-[#1A1515] border-b-2 shadow-lg"
 >
   <nav
     class="flex w-full lg:justify-between relative justify-center items-center p-5"
   >
-    <a aria-label="Inicio" href="/#home" class="absolute left-0 lg:hidden">
+    <a aria-label="Inicio" href="/#home" class="left-0 absolute lg:hidden">
       <Icon name="teenyicons:home-outline" class="w-7" />
     </a>
     <a
@@ -64,10 +50,11 @@ const routes = [
       class="font-extrabold text-transparent text-2xl lg:text-2xl rainbow-text text-black"
       >Samuel Aya
     </a>
-    <ul class="lg:flex hidden">
-      <li>
-        {
-          routes.map((route) => (
+    <LanguagesSwitcher className="lg:hidden absolute right-0"/>
+    <ul class="lg:flex hidden items-center">
+      {
+        routes.map((route) => (
+          <li>
             <a
               aria-label={route.title}
               class="py-3 cursor-pointer px-4 border-2 border-transparent hover:border-white transition-colors rounded-md"
@@ -75,9 +62,12 @@ const routes = [
             >
               {route.title}
             </a>
-          ))
-        }
-      </li>
+          </li>
+        ))
+      }
+    <li class="ml-2">
+      <LanguagesSwitcher />
+    </li>
     </ul>
   </nav>
 </header>

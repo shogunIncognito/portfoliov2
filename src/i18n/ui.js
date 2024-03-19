@@ -14,11 +14,15 @@ export const ui = {
         'nav.abilities': 'Habilidades',    
         'nav.certifications': 'Certificaciones',
         'nav.cv': 'CV',
+        'footer.back': 'Volver arriba',
+        'footer.copyright': 'Todos los derechos reservados'
     },
     en: {
         'nav.home': 'About me',
         'nav.projects': 'Projects',
         'nav.abilities': 'Abilities',    
         'nav.certifications': 'Certifications',
+        'footer.back': 'Back to top',
+        'footer.copyright': 'All rights reserved'
     },    
 };
