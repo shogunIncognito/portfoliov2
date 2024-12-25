@@ -28,10 +28,10 @@ const routes = [
     path: "/certificaciones",
     title: t("nav.certifications"),
   },
-  {
-    path: "/cv",
-    title: t("nav.cv"),
-  },
+  // {
+  //   path: "/cv",
+  //   title: t("nav.cv"),
+  // },
 ];
 ---
 
@@ -50,7 +50,7 @@ const routes = [
       class="font-extrabold text-transparent text-2xl lg:text-2xl rainbow-text text-black"
       >Samuel Aya
     </a>
-    <LanguagesSwitcher className="lg:hidden absolute right-0"/>
+    <LanguagesSwitcher className="lg:hidden absolute right-0" />
     <ul class="lg:flex hidden items-center">
       {
         routes.map((route) => (
@@ -65,9 +65,9 @@ const routes = [
           </li>
         ))
       }
-    <li class="ml-2">
-      <LanguagesSwitcher />
-    </li>
+      <li class="ml-2">
+        <LanguagesSwitcher />
+      </li>
     </ul>
   </nav>
 </header>
