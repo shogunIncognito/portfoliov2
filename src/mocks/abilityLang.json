@@ -21,6 +21,22 @@
       "title": "React"
     },
     {
+      "title": "Angular",
+      "name": "logos:angular-icon"
+    },
+    {
+      "title": "Vue JS",
+      "name": "logos:vue"
+    },
+    {
+      "title": "PHP",
+      "name": "logos:php"
+    },
+    {
+      "title": "Laravel",
+      "name": "logos:laravel"
+    },
+    {
       "name": "logos:tailwindcss-icon",
       "title": "Tailwind CSS"
     },
@@ -51,10 +67,6 @@
     {
       "title": "SQL",
       "name": "vscode-icons:file-type-sql"
-    },
-    {
-      "title": "Vue JS",
-      "name": "logos:vue"
     },
     {
       "title": "Express",

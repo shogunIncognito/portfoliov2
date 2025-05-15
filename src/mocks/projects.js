@@ -1,9 +1,11 @@
 import spotifyimg from '../assets/spotifyclon.webp'
-import designtee from '../assets/clothes-App.webp' 
+import designtee from '../assets/clothes-App.webp'
 import euroexchange from '../assets/interfaceEuro.webp'
 import moviesearcher from '../assets/interfaceImageMovie.webp'
 import livechat from '../assets/livechat.webp'
 import maxautos from '../assets/maxautospage.webp'
+import tattooInk from '../assets/interfaceTattooink.png'
+import appleHouse from '../assets/interfaceApplehouse.png'
 
 export default [
     {
@@ -11,7 +13,7 @@ export default [
         title: {
             es: "Clon de Spotify",
             en: "Spotify Clone"
-        
+
         },
         description: {
             es: "Clon de la interfaz de la plataforma de música 'Spotify'",
@@ -64,7 +66,7 @@ export default [
         id: 4,
         title: {
             es: "Buscador de películas",
-            en: "Movie searcher"        
+            en: "Movie searcher"
         },
         description: {
             es: "App de búsqueda de películas, mediante el uso de la api de 'omdbapi'.",
@@ -118,5 +120,44 @@ export default [
         image: maxautos,
         github: "https://github.com/shogunIncognito/simplemaxapp-pWeb",
         link: "https://simplemaxapp.vercel.app/"
+    },
+    {
+        id: 7,
+        title: {
+            es: "TattooInk",
+            en: "TattooInk web app"
+        },
+        description: {
+            es: "App web para promocionar tatuadores en Villavicencio, con un panel de administración y un catálogo de tatuadores.",
+            en: "Web app to promote tattoo artists in Villavicencio, with an administration panel and a catalog of tattoo artists."
+        },
+        languages: [
+            "Vue.js",
+            "TailwindCSS",
+            "Clerk",
+        ],
+        image: tattooInk,
+        link: "https://tattooink.site/",
+        github: "https://github.com/shogunIncognito/tattoapp"
+    },
+    {
+        id: 8,
+        title: {
+            es: "AppleHouse",
+            en: "AppleHouse"
+        },
+        description: {
+            es: "App web para promocionar productos de Apple, con un panel de administración y un catálogo de productos.",
+            en: "Web app to promote Apple products, with an administration panel and a product catalog."
+        },
+        languages: [
+            "NextJS",
+            "TailwindCSS",
+            "Node",
+            "MongoDB"
+        ],
+        image: appleHouse,
+        link: "https://applehouse-rho.vercel.app/",
+        github: "https://github.com/shogunIncognito/applehousev2"
     }
 ]
