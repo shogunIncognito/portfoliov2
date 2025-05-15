@@ -139,25 +139,5 @@ export default [
         image: tattooInk,
         link: "https://tattooink.site/",
         github: "https://github.com/shogunIncognito/tattoapp"
-    },
-    {
-        id: 8,
-        title: {
-            es: "AppleHouse",
-            en: "AppleHouse"
-        },
-        description: {
-            es: "App web para promocionar productos de Apple, con un panel de administración y un catálogo de productos.",
-            en: "Web app to promote Apple products, with an administration panel and a product catalog."
-        },
-        languages: [
-            "NextJS",
-            "TailwindCSS",
-            "Node",
-            "MongoDB"
-        ],
-        image: appleHouse,
-        link: "https://applehouse-rho.vercel.app/",
-        github: "https://github.com/shogunIncognito/applehousev2"
     }
 ]
